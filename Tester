@@ -1,0 +1,44 @@
+//Minjun
+
+import java.util.Scanner;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		Methods m = new Methods();
+		
+		System.out.println("Choose the Number System for input!");
+		System.out.println("1. Binary System");
+		System.out.println("2. Octal System");
+		System.out.println("3. HexaDecimal System");
+		System.out.println("4. Decimal System");
+		int x = in.nextInt();
+		in.nextLine();
+		System.out.println("Choose the Number System for output!");
+		System.out.println("1. Binary System");
+		System.out.println("2. Octal System");
+		System.out.println("3. HexaDecimal System");
+		System.out.println("4. Decimal System");
+		int y = in.nextInt();
+		in.nextLine();
+		System.out.println("Please type in the number in form of your selected number system for input!");
+		int n = in.nextInt();
+		int ans = 0;
+		if(x == 1 && y == 4) { 
+			ans = Integer.parseInt(m.BtoD(String.valueOf(n)));
+		}
+		else if(x == 2 && y == 4) { 
+			ans = Integer.parseInt(m.OtoD(String.valueOf(n)));
+		}
+		else if(x == 3 && y == 4) { 
+			ans = Integer.parseInt(m.HtoD(String.valueOf(n)));
+		}
+		
+		
+		System.out.println(ans);
+		
+	}	
+
+}
