@@ -1,0 +1,44 @@
+//methods that will convert binaries, octal, and hexadecimal number systems to decimal system
+
+
+import java.util.*;
+public class Methods {
+
+	
+	public String BtoD(String n) {
+		char[] x = n.toCharArray();
+		int result = 0;
+		int power = 0;
+		
+		for(int i = x.length-1; i >= 0; i--) {
+			result += Math.pow(2, power) * (x[i] - '0');
+			power++;
+		}
+		
+		return String.valueOf(result);
+	}
+	public String OtoD(String n) {
+		char[] x = n.toCharArray();
+		int result = 0;
+		int power = 0;
+		
+		for(int i = x.length-1; i >= 0; i--) {
+			result += Math.pow(8, power) * (x[i] - '0');
+			power++;
+		}
+		
+		return String.valueOf(result);
+	}
+	public String HtoD(String n) {
+		char[] x = n.toCharArray();
+		int result = 0;
+		int power = 0;
+		
+		for(int i = x.length-1; i >= 0; i--) {
+			result += Math.pow(16, power) * (x[i] - '0');
+			power++;
+		}
+		
+		return String.valueOf(result);
+	}
+}
