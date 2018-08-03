@@ -1,0 +1,77 @@
+//Minjun
+import java.io.*;
+import java.util.*;
+
+public class Main extends Methods{
+
+	private static String x;
+	private static String y;
+	private static String n;
+	private static String ans;
+	public Main() {
+		x = "";
+		y = "";
+		ans = "";
+	}
+	
+	public String getX() {
+		return x;
+	}
+	public String getY() {
+		return y;
+	}
+	public String ans() {
+		return ans;
+	}
+	Scanner in = new Scanner(System.in);
+	public void dispInput() {
+		System.out.println("Choose the Number System for input!");
+		System.out.println("1. Binary System");
+		System.out.println("2. Octal System");
+		System.out.println("3. HexaDecimal System");
+		System.out.println("4. Decimal System");
+		x = in.nextLine();
+		System.out.println("Please type in the number in form of your selected number system for input!");
+		n = in.nextLine();
+		
+
+	}
+	
+	public void dispOutput() {
+		System.out.println("Choose the Number System for output!");
+		System.out.println("1. Binary System");
+		System.out.println("2. Octal System");
+		System.out.println("3. HexaDecimal System");
+		System.out.println("4. Decimal System");
+		y = in.nextLine();
+	}
+	
+	public void procConvert() {
+		String n = "";
+		int ans = 0;
+		if(x.equals("1") && y == ("4")) { 
+			ans = Integer.parseInt(BtoD(n));
+		}
+		else if(x.equals("2") && y.equals("4")) { 
+			ans = Integer.parseInt(OtoD(n));
+		}
+		else if(x.equals("3") && y.equals("4")) { 
+			ans = Integer.parseInt(HtoD(n));
+		}
+		else if(x.equals("4") && y.equals("1")) { 
+			ans = Integer.parseInt(DtoB(n));
+		}
+		else if(x.equals("4") && y.equals("2")) { 
+			ans = Integer.parseInt(DtoO(n));
+		}
+		else if(x.equals("4") && y.equals("3")) { 
+			ans = Integer.parseInt(DtoH(n));
+		}
+		
+		System.out.println(ans);
+	}
+	
+	public void prodcCalc() {
+		
+	}
+}
