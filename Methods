@@ -1,5 +1,5 @@
 import java.util.*;
-public class convMethods {
+public class ConvMethods {
 
 	//Minjun
 	public String BtoD(String n) {
