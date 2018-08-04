@@ -21,22 +21,22 @@ public class CalcDisplay extends ConvMethods{
 		ansBase = "";
 		cancel = 0;
 	}
-	public String getFirst() {
+	public static String getFirst() {
 		return first;
 	}
 	public static int getCancel(){
 		return cancel;
 	}
-	public String getFirstBase() {
+	public static String getFirstBase() {
 		return firstBase;
 	}
-	public char getOptr() {
+	public static char getOptr() {
 		return optr;
 	}
-	public String getSecond() {
+	public static String getSecond() {
 		return second;
 	}
-	public String getSecondBase() {
+	public static String getSecondBase() {
 		return secondBase;
 	}
 	public static String getAns() {
@@ -62,9 +62,9 @@ public class CalcDisplay extends ConvMethods{
 		else if(optr == '/') ans = (Integer.parseInt(first) / Integer.parseInt(second)) + "";
 	}
 	public static void convOutput() {
-		if(Integer.parseInt(ansBase)==1) ans = BtoD(ans);
-		else if(Integer.parseInt(ansBase)==2) ans = OtoD(ans);
-		else if(Integer.parseInt(ansBase)==3) ans = HtoD(ans);
+		if(Integer.parseInt(ansBase)==1) ans = DtoB(ans);
+		else if(Integer.parseInt(ansBase)==2) ans = DtoO(ans);
+		else if(Integer.parseInt(ansBase)==3) ans = DtoH(ans);
 	}
 	static Scanner in = new Scanner(System.in);
 	public static void dispFirst() {
