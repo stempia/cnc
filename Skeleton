@@ -1,0 +1,108 @@
+Class:
+ConvDisplay extends ConvMethod
+	private static String inputBase;
+	//input option (1 = B, 2 = O, 3 = H, 4 = D)
+	private static String outputBase; //output type “
+	private static String input; //input number 
+	private static String ans; //answer
+	
+	public String getX() 
+	
+	public String getY() 
+	
+	public String ans() 
+		
+	public void dispInput() 
+		input x
+		input n
+		convInput()
+	
+	public void dispOutput() 
+		input y
+		convOutput()
+	
+	public void convInput() 
+		if(x == 1) ans = BtoD()
+		else if(x==2) ans = OtoD()
+		else if(x==3) ans = HtoD()
+	public void convOutput() 
+		if(y == 1) ans = DtoB()
+		else if(y==2) ans = DtoO()
+		else if(y==3) ans = DtoH()
+
+
+
+
+ConvMethod
+	String BtoD(String n) //binary to decimal
+	String OtoD(String n) //octal to decimal
+	String HtoD(String n) //hex to decimal
+	String DtoB(String n) //decimal to binary
+	String DtoO(String n) //decimal to octal
+	String DtoH(String n) //decimal to hex
+Calculator
+
+
+
+CalcDisplay
+private static String first; //first number to multiply
+private static String firstBase; //type of input for first (1=B, 2=O, etc.)
+private static char optr; //type of operator
+private static String second; //second number to multiply
+private static String secondBase; //type of input for second(1=B, etc.)
+private static String ansBase; //type of output wanted
+private static String ans; //answer output
+
+public String getFirst
+public String getFirstBase
+public String getOptr
+public String getSecond
+public String getSecondBase
+public String ans
+
+public void dispFirst()
+	input first
+	input firstBase
+	convFirst()
+public void dispOptr()
+	input optr
+	
+
+
+public void dispSecond()
+	input second
+	input secondBase
+	convSecond()
+public void dispOutput()
+	input ansBase
+calcOutput()
+	convOutput()
+public void convFirst() 
+		if(firstBase == 1) first = BtoD()
+		else if(firstBase==2) first = OtoD()
+		else if(firstBase==3) first = HtoD()
+public void convSecond() 
+		if(secondBase == 1) second = BtoD()
+		else if(secondBase==2) second = OtoD()
+		else if(secondBase==3) second = HtoD()
+public void calcOutput()
+		if(optr==”+”) ans = first + second
+		else if(optr==”-“) ans = first-second
+		else if(optr == “*”) ans = first * second
+		else if(optr == “/”) ans = first / second
+public void convOutput() 
+		if(ansBase == 1) ans = DtoB()
+		else if(ansBase==2) ans = DtoO()
+		else if(ansBase==3) ans = DtoH()
+
+CalcMethod
+(call)
+	String BtoD(String n) //binary to decimal
+	String OtoD(String n) //octal to decimal
+	String HtoD(String n) //hex to decimal
+	String DtoB(String n) //decimal to binary
+	String DtoO(String n) //decimal to octal
+	String DtoH(String n) //decimal to hex
+
+
+
