@@ -10,6 +10,7 @@ public class CalcDisplay extends ConvMethods{
 	private static String secondBase;
 	private static String ans;
 	private static String ansBase;
+	private static int cancel;
 	public CalcDisplay() {
 		first = "";
 		firstBase = "";
@@ -18,9 +19,13 @@ public class CalcDisplay extends ConvMethods{
 		secondBase = "";
 		ans = "";
 		ansBase = "";
+		cancel = 0;
 	}
 	public String getFirst() {
 		return first;
+	}
+	public static int getCancel(){
+		return cancel;
 	}
 	public String getFirstBase() {
 		return firstBase;
@@ -34,35 +39,35 @@ public class CalcDisplay extends ConvMethods{
 	public String getSecondBase() {
 		return secondBase;
 	}
-	public String getAns() {
+	public static String getAns() {
 		return ans;
 	}
 	public String getAnsBase() {
 		return ansBase;
 	}
-	public void convFirst() {
+	public static void convFirst() {
 		if(Integer.parseInt(firstBase)==1) first = BtoD(first);
 		else if(Integer.parseInt(firstBase)==2) first = OtoD(first);
 		else if(Integer.parseInt(firstBase)==3) first = HtoD(first);
 	}
-	public void convSecond() {
+	public static void convSecond() {
 		if(Integer.parseInt(secondBase)==1) second = BtoD(second);
 		else if(Integer.parseInt(secondBase)==2) second = OtoD(second);
 		else if(Integer.parseInt(secondBase)==3) second = HtoD(second);
 	}
-	public void calcOutput() {
+	public static void calcOutput() {
 		if(optr == '+') ans = (Integer.parseInt(first) + Integer.parseInt(second)) + "";
 		else if(optr == '-') ans = (Integer.parseInt(first) - Integer.parseInt(second)) + "";
 		else if(optr == '*') ans = (Integer.parseInt(first) * Integer.parseInt(second)) + "";
 		else if(optr == '/') ans = (Integer.parseInt(first) / Integer.parseInt(second)) + "";
 	}
-	public void convOutput() {
+	public static void convOutput() {
 		if(Integer.parseInt(ansBase)==1) ans = BtoD(ans);
 		else if(Integer.parseInt(ansBase)==2) ans = OtoD(ans);
 		else if(Integer.parseInt(ansBase)==3) ans = HtoD(ans);
 	}
-	Scanner in = new Scanner(System.in);
-	public void dispFirst() {
+	static Scanner in = new Scanner(System.in);
+	public static void dispFirst() {
 		System.out.println("Choose the Number System for input!");
 		System.out.println("1. Binary System");
 		System.out.println("2. Octal System");
@@ -73,11 +78,11 @@ public class CalcDisplay extends ConvMethods{
 		first = in.nextLine();
 		convFirst();
 	}
-	public void dispOptr() {
+	public static void dispOptr() {
 		System.out.println("Choose the Operator (+, -, *, /)");
 		optr = in.nextLine().charAt(0);
 	}
-	public void dispSecond() {
+	public static void dispSecond() {
 		System.out.println("Choose the Number System for input!");
 		System.out.println("1. Binary System");
 		System.out.println("2. Octal System");
@@ -88,7 +93,7 @@ public class CalcDisplay extends ConvMethods{
 		second = in.nextLine();
 		convSecond();
 	}
-	public void dispOutput() {
+	public static void dispOutput() {
 		System.out.println("Choose the Number System for input!");
 		System.out.println("1. Binary System");
 		System.out.println("2. Octal System");
@@ -97,6 +102,13 @@ public class CalcDisplay extends ConvMethods{
 		ansBase = in.nextLine();
 		calcOutput();
 		convOutput();
+	}
+	public static void dispCancel() {
+		System.out.println();
+		System.out.println("Would you like to exit?");
+		System.out.println("Type 1 to EXIT and 0 to TRY AGAIN");
+		cancel = in.nextInt();
+		
 	}
 	
 }
